@@ -1,0 +1,5 @@
+wifi.setmode(wifi.STATION)
+wifi.sta.config(WIFISSID,WIFIPASSWORD)
+wifi.sta.sethostname(HOSTNAME)
+dofile('radio.lua')
+dofile('lightserver.lua')

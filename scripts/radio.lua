@@ -15,7 +15,7 @@ radio.sequences = {
 }
 
 
-local function emitControl(sequence)
+local function emitControl(sequence, pin)
 
 
     local timeDelay = 113;
@@ -56,9 +56,9 @@ local function emitControl(sequence)
             else
                 wave = patterns[signal[j + 1] + 3]
             end
-            write(0, 1)
+            write(pin, 1)
             delay(wave[1] * timeDelay + staticDelay)
-            write(0, 0)
+            write(pin, 0)
             delay(wave[2] * timeDelay + staticDelay)
         end
 
